@@ -1,0 +1,128 @@
+/* Roster (list) page */
+.shinobi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+#root .shinobi-card {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 1fr auto;
+    column-gap: 16px;
+    padding: 20px;
+    margin: 0;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#root .shinobi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.shinobi-card-preview {
+    display: flex;
+    align-items: center;
+}
+
+.shinobi-card-info h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.shinobi-card-info h3 a:hover {
+    text-decoration: underline;
+}
+
+#root .shinobi-card-rank {
+    color: #b8bfcc;
+    font-size: 0.9rem;
+    margin: 4px 0 10px;
+}
+
+.shinobi-card-info ul {
+    padding: 0;
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+}
+
+.shinobi-card-info li {
+    list-style: none;
+    margin-bottom: 2px;
+}
+
+.shinobi-card-info li span {
+    display: inline-block;
+    width: 110px;
+    color: #8a93a3;
+}
+
+#root .shinobi-card-fee {
+    color: #ffd166;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#root .shinobi-card footer {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+    margin: 10px 0 0;
+    padding: 0;
+    background: none;
+}
+
+/* Delete buttons are red everywhere */
+#root .delete-button {
+    background-color: #a3121f;
+    border-color: #a3121f;
+}
+
+#root .delete-button:hover {
+    background-color: #d0182a;
+}
+
+/* Details page */
+#root .shinobi-details {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.shinobi-details table {
+    margin-top: 20px;
+}
+
+.shinobi-details th {
+    color: #8a93a3;
+    font-weight: 400;
+}
+
+.shinobi-details .fee-cell {
+    text-align: right;
+    color: #b8bfcc;
+}
+
+.shinobi-details .total-row th,
+.shinobi-details .total-row .fee-cell {
+    color: #ffd166;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#root .shinobi-details footer {
+    margin: 10px 0 0;
+    padding: 0;
+    background: none;
+}
+
+@media (max-width: 800px) {
+    #root .shinobi-details {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
